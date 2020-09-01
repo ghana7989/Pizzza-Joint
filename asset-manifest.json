@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Pizzza-Joint/static/css/main.7882c667.chunk.css",
+    "main.js": "/Pizzza-Joint/static/js/main.66ef5a75.chunk.js",
+    "main.js.map": "/Pizzza-Joint/static/js/main.66ef5a75.chunk.js.map",
+    "runtime-main.js": "/Pizzza-Joint/static/js/runtime-main.9d7d975a.js",
+    "runtime-main.js.map": "/Pizzza-Joint/static/js/runtime-main.9d7d975a.js.map",
+    "static/js/2.2975e07b.chunk.js": "/Pizzza-Joint/static/js/2.2975e07b.chunk.js",
+    "static/js/2.2975e07b.chunk.js.map": "/Pizzza-Joint/static/js/2.2975e07b.chunk.js.map",
+    "index.html": "/Pizzza-Joint/index.html",
+    "precache-manifest.a7c1798997c27c8d3449bf8d163263ca.js": "/Pizzza-Joint/precache-manifest.a7c1798997c27c8d3449bf8d163263ca.js",
+    "service-worker.js": "/Pizzza-Joint/service-worker.js",
+    "static/css/main.7882c667.chunk.css.map": "/Pizzza-Joint/static/css/main.7882c667.chunk.css.map",
+    "static/js/2.2975e07b.chunk.js.LICENSE.txt": "/Pizzza-Joint/static/js/2.2975e07b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9d7d975a.js",
+    "static/js/2.2975e07b.chunk.js",
+    "static/css/main.7882c667.chunk.css",
+    "static/js/main.66ef5a75.chunk.js"
+  ]
+}
