@@ -2,15 +2,42 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-
+const containerVariant = {
+  hidden: {
+    opacity: 0,
+    x: "100vw"
+  },
+  visibile: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      delay: 0.5
+    }
+  }
+}
+const nextVariants = {
+  hidden: {
+    opacity: 0,
+    x: "-100vw",
+  },
+  visibile: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      type: "spring",
+      stiffness: 120
+    }
+  }
+}
 const Base = ({ addBase, pizza }) => {
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
 
   return (
     <motion.div className="base container"
-      initial={{ x: "100vw" }}
-      animate={{ x: 0 }}
-      transition={{ type: "spring", delay: 0.5 }}
+      variants={containerVariant}
+      initial="hidden"
+      animate="visibile"
     >
 
       <h3>Step 1: Choose Your Base</h3>
@@ -30,9 +57,10 @@ const Base = ({ addBase, pizza }) => {
 
       {pizza.base && (
         <motion.div className="next"
-          initial={{ x: "-100vw" }}
-          animate={{ x: 0 }}
-          transition={{ type: "spring", stiffness: 120 }}
+          variants={nextVariants}
+          // Still works because it takes values as defined to its parent
+          // initial="hidden"
+          // animate="visibile"
         >
           <Link to="/toppings">
             <motion.button
