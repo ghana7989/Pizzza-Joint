@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 
-const Header = () => {
+const Header = ({clearState}) => {
   return (
     <header>
       <Link to="/">
-        <div className="logo">
+        <div className="logo" onClick={clearState}>
           <svg className="pizza-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
             <path
               fill="none"
