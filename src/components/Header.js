@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 const svgVariants = {
@@ -27,7 +26,6 @@ const pathVariants = {
 const Header = ({ clearState }) => {
   return (
     <header>
-      {/* <Link to="/"> */}
         <motion.div drag className="logo" onClick={clearState}>
           <motion.svg
             variants={svgVariants}
@@ -48,7 +46,6 @@ const Header = ({ clearState }) => {
             />
           </motion.svg>
         </motion.div>
-      {/* </Link> */}
       <motion.div className="title"
         initial={{ y: -350 }}
         animate={{ y: -10, }}
