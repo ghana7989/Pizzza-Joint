@@ -20,6 +20,11 @@ const containerVariant = {
       // staggerChildren to make a delay in between children 
       staggerChildren: 0.4
     }
+  },
+  exit: {
+    x: "-100vw",
+    transition: { ease: "easeInOut" }
+
   }
 }
 const childrenVariants = {
@@ -28,7 +33,6 @@ const childrenVariants = {
   },
   visible: {
     opacity: 1,
-
   }
 }
 // ------------variants-------------end
@@ -36,34 +40,20 @@ const childrenVariants = {
 
 const Order = ({ pizza }) => {
 
-  const [showTitle, setShowTitle] = useState(true)
-  setTimeout(() => {
-    setShowTitle(false)
-  }, 4000);
-
-
-
   return (
     <motion.div className="container order"
       variants={containerVariant}
       initial="hidden"
       animate="visible"
+      exit="exit"
     >
-      <AnimatePresence>
-        {
-          showTitle &&
-          <motion.h2
-            exit={{ scale: 350 }}
-            transition={{ duration: 2.8, type: "tween" }}
-          >Thank you for your order
+      <h2
+      >Thank you for your order
             <span role="img" aria-label="4">😊</span>
-          </motion.h2>
+      </h2>
 
-        }
-      </AnimatePresence>
-
-      <motion.p variants={childrenVariants}>You ordered a {pizza.base} pizza with:</motion.p>
-      <motion.div variants={childrenVariants}>
+      <motion.p variants={childrenVariants} >You ordered a {pizza.base} pizza with:</motion.p>
+      <motion.div variants={childrenVariants} >
         {pizza.toppings.map(topping => <motion.div key={topping}>{topping}</motion.div>)}
       </motion.div>
 

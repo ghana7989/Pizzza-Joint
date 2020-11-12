@@ -25,6 +25,11 @@ div {
 	letter-spacing: 2px;
 	list-style-type: none;
 	text-decoration: none;
+	user-select: none;
+}
+button:active,
+button:focus {
+	outline: none;
 }
 body {
 	background: rgb(100, 0, 123);
@@ -121,10 +126,19 @@ li span.active::before {
 	display: flex;
 	justify-content: center;
 	align-items: flex-start;
-  flex-direction: column;
-  margin-top: auto;
+	flex-direction: column;
+	margin-top: auto;
 }
 .toppings-button {
-  padding: 10px 30px;
-  letter-spacing: 2px;
+	padding: 10px 30px;
+	letter-spacing: 2px;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  z-index: 1;
 }
