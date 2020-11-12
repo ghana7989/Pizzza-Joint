@@ -36,9 +36,9 @@ function App() {
 
   return (
     <>
-      <Header clearState={clearState} />  
+      <Header clearState={clearState} />
       <Modal showModal={showModal} setShowModal={setShowModal} />
-      <AnimatePresence exitBeforeEnter>
+      <AnimatePresence exitBeforeEnter onExitComplete={() => setShowModal(false)}>
         <Switch location={location} key={location.key}>
           <Route exact path="/base">
             <Base addBase={addBase} pizza={pizza} />
@@ -47,7 +47,7 @@ function App() {
             <Toppings addTopping={addTopping} pizza={pizza} />
           </Route>
           <Route exact path="/order">
-            <Order pizza={pizza} />
+            <Order pizza={pizza} setShowModal={setShowModal} />
           </Route>
           <Route exact path="/">
             <Home />
